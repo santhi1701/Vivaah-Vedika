@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding Registration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 192, 203, 0.9);
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #b0005c;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #b0005c;
+}.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #b0005c;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffe0ea;
+    right: 30px;
+    top: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+    .header-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .registration-container {
+      max-width: 500px;
+      background: #fff;
+      margin: 100px auto;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(176, 0, 92, 0.2);
+      border-radius: 12px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b0005c;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn-submit {
+      background-color: #b0005c;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #ff5d8f;
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      display: none;
+      margin-top: 15px;
+    }
+
+  
+    footer {
+      background-color: #b0005c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #fff2f7;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .error {
+  font-size: 0.9rem;
+}
+
+  </style>
+</head>
+<body>
+
+
+<header>
+    <div class="logo"><i class="fas fa-heart"></i> Vivaah Vedika</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <ul class="nav-links">
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fas fa-wrench"></i> Services</a></li>
+          <li><a href="testimonal.html"><i class="fas fa-heart"></i> Testimonals</a></li>
+       <li><a href="register.html"><i class="fas fa-user-plus"></i> Registration</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<div class="registration-container">
+  <h2>Register for Your Dream Wedding</h2>
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" required />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" required />
+    </div>
+    <div class="form-group">
+      <label for="weddingType">Wedding Type *</label>
+      <select id="weddingType" required>
+        <option value="">--Select--</option>
+        <option value="traditional">Traditional</option>
+        <option value="destination">Destination</option>
+        <option value="custom">Custom</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="date">Preferred Date *</label>
+      <input type="date" id="date" required />
+    </div>
+    <button type="submit" class="btn-submit">Register</button>
+    <p class="success-message" id="successMessage">Thank you! We will contact you soon.</p>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy;2025  Vivaah Vedika | Your Dream, Our Promise.</p>
+</footer>
+
+<script>
+  const form = document.getElementById('registrationForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Remove previous errors
+    document.querySelectorAll(".error").forEach(el => el.remove());
+
+    let isValid = true;
+
+    // Get form inputs
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const weddingType = document.getElementById('weddingType');
+    const date = document.getElementById('date');
+
+    // Name validation
+    if (!/^[a-zA-Z\s]+$/.test(name.value.trim())) {
+      showError(name, "Please enter a valid full name (letters only).");
+      isValid = false;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+      showError(email, "Please enter a valid email address.");
+      isValid = false;
+    }
+
+    // Phone validation
+    const phonePattern = /^\d{10}$/;
+    if (!phonePattern.test(phone.value.trim())) {
+      showError(phone, "Phone number must be 10 digits.");
+      isValid = false;
+    }
+
+    // Wedding type validation
+    if (weddingType.value === "") {
+      showError(weddingType, "Please select a wedding type.");
+      isValid = false;
+    }
+
+    // Date validation
+    const selectedDate = new Date(date.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (selectedDate <= today || isNaN(selectedDate)) {
+      showError(date, "Please select a valid future date.");
+      isValid = false;
+    }
+
+    // Final decision
+    if (isValid) {
+      successMessage.style.display = 'block';
+
+      // Wait 2 seconds, then go to home page
+      setTimeout(() => {
+        window.location.href = "home.html";
+      }, 2000);
+
+      form.reset();
+    } else {
+      successMessage.style.display = 'none';
+    }
+  });
+
+  function showError(input, message) {
+    const error = document.createElement('div');
+    error.className = 'error';
+    error.style.color = 'red';
+    error.style.marginTop = '5px';
+    error.textContent = message;
+    input.parentNode.appendChild(error);
+  }
+   const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  toggle.innerHTML = navLinks.classList.contains("active")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+</script>
+
+
+
+</body>
+</html>

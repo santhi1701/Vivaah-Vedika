@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 192, 203, 0.9);
+      padding: 15px 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #b0005c;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #b0005c;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #b0005c;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #ffe0ea;
+        right: 30px;
+        top: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    .content-wrapper {
+      flex: 1;
+      padding-top: 100px; /* space below fixed header */
+      padding-bottom: 40px; /* space above footer */
+    }
+
+    .testimonial-section {
+      text-align: center;
+      padding: 40px 20px;
+      min-height: calc(100vh - 160px); /* viewport height minus header+footer */
+    }
+
+    h1 {
+      margin-bottom: 50px;
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    .testimonial-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 250px;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 0 10px;
+      width: 80%;
+      max-width: 500px;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .testimonial-card img {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #555;
+    }
+
+    .testimonial-buttons button {
+      font-size: 24px;
+      margin: 20px 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: palevioletred;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .testimonial-buttons button:hover {
+      background-color: #b0005c;
+    }
+
+    footer {
+      background-color: #b0005c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fas fa-heart"></i> Vivaah Vedika</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <ul class="nav-links">
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fas fa-wrench"></i> Services</a></li>
+        <li><a href="testimonal.html"><i class="fas fa-heart"></i> Testimonials</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Registration</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <section class="testimonial-section">
+      <h1>What Our Users Say</h1>
+      <div class="testimonial-container" id="testimonialContainer">
+        <!-- JS injects testimonial here -->
+      </div>
+      <div class="testimonial-buttons">
+        <button onclick="prevTestimonial()">⟨</button>
+        <button onclick="nextTestimonial()">⟩</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Vivaah Vedika | Your Dream, Our Promise
+  </footer>
+
+  <script>
+    const testimonials = [
+      {
+        name: "John Doe",
+        message: "This service has changed my life. Highly recommend!",
+        image: "s2.jpg"
+      },
+      {
+        name: "Jane Smith",
+        message: "Fantastic experience. The support was top-notch.",
+        image: "s4.jpg"
+      },
+      {
+        name: "Amit Kumar",
+        message: "Very professional and easy to work with.",
+        image: "6.jpg"
+      },
+      {
+        name: "Sofia Lee",
+        message: "Creative and reliable. I’ll come back for more.",
+        image: "m7.jpg"
+      }
+    ];
+
+    let current = 0;
+
+    function showTestimonial(index) {
+      const container = document.getElementById("testimonialContainer");
+      container.innerHTML = `
+        <div class="testimonial-card">
+          <img src="${testimonials[index].image}" alt="${testimonials[index].name}">
+          <h3>${testimonials[index].name}</h3>
+          <p>"${testimonials[index].message}"</p>
+        </div>
+      `;
+    }
+
+    function nextTestimonial() {
+      current = (current + 1) % testimonials.length;
+      showTestimonial(current);
+    }
+
+    function prevTestimonial() {
+      current = (current - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(current);
+    }
+
+    // Initial load
+    showTestimonial(current);
+
+    // Auto-slide every 5 seconds
+    setInterval(nextTestimonial, 5000);
+
+    // Toggle menu
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      toggle.innerHTML = navLinks.classList.contains("active")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>

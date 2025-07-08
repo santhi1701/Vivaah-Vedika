@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - Forever Weddings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 192, 203, 0.9);
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #b0005c;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #b0005c;
+}.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #b0005c;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffe0ea;
+    right: 30px;
+    top: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+    .header-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .services-section {
+      max-width: 1200px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
+
+    .services-section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-box {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 20px;
+    }
+
+    .service-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #b0005c;
+    }
+
+    .service-content p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #b0005c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><i class="fas fa-heart"></i>  Vivaah Vedika</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <ul class="nav-links">
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fas fa-wrench"></i> Services</a></li>
+          <li><a href="testimonal.html"><i class="fas fa-heart"></i> Testimonals</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Registration</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<section class="services-section">
+  <h2>What We Offer</h2>
+  <div class="service-grid">
+    <div class="service-box">
+      <img src="m1.jpg" alt="Wedding Planning">
+      <div class="service-content">
+        <h3>Wedding Planning</h3>
+        <p>From venue selection to theme creation, we plan your entire wedding with precision and passion.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="m4.jpg" alt="Decor & Themes">
+      <div class="service-content">
+        <h3>Decor & Themes</h3>
+        <p>Transform venues into breathtaking spaces with customized decor, floral designs, and lighting.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="m0.jpg" alt="Catering Services">
+      <div class="service-content">
+        <h3>Catering Services</h3>
+        <p>Delight your guests with exquisite multi-cuisine menus prepared by top chefs and caterers.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="m5.jpg" alt="Styling & Makeup">
+      <div class="service-content">
+        <h3>Styling & Makeup</h3>
+        <p>We ensure the bride and groom look their best with professional makeup and wardrobe services.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="m6.jpg" alt="Entertainment">
+      <div class="service-content">
+        <h3>Entertainment</h3>
+        <p>Live music, DJs, dancers, and special acts that make your celebration unforgettable.</p>
+      </div>
+    </div>
+    <div class="service-box">
+      <img src="m7.jpg" alt="Logistics & Coordination">
+      <div class="service-content">
+        <h3>Logistics & Coordination</h3>
+        <p>Seamless coordination of transportation, guest management, and schedules — all handled by our team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy;2025  Vivaah Vedika | Your Dream, Our Promise.
+</footer>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  toggle.innerHTML = navLinks.classList.contains("active")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Forever Weddings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 192, 203, 0.9);
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #b0005c;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #b0005c;
+}.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #b0005c;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+der-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 75px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-left: 6px solid #b0005c;
+      padding-left: 50px;
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    /* Team Section */
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .team-member {
+      background-color: #ffe0ea;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 12px rgba(176, 0, 92, 0.2);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(176, 0, 92, 0.35);
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #b0005c;
+    }
+
+    .team-member h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.2rem;
+      color: #b0005c;
+    }
+
+    .team-member p {
+      font-size: 0.9rem;
+      color: #551040;
+    }
+
+    /* How We Work */
+    .workflow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .step {
+      background: #ffe0ea;
+      border-left: 6px solid #b0005c;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffe0ea;
+    right: 30px;
+    top: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+} footer {
+      background-color: #b0005c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+    <div class="logo"><i class="fas fa-heart"></i> Vivaah Vedika</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav">
+      <ul class="nav-links">
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fas fa-wrench"></i> Services</a></li>
+          <li><a href="testimonal.html"><i class="fas fa-heart"></i> Testimonals</a></li>
+        <li><a href="register.html"><i class="fas fa-user-plus"></i> Registration</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <!-- Team Section -->
+  <section>
+    <h2>Meet Our Team</h2>
+    <p>Our passionate and experienced team is dedicated to bringing your dream wedding to life. Each member brings unique skills and creativity to ensure every detail is perfect.</p>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="c.jpg" alt="Alice - Lead Planner" />
+        <h3>Shanthi</h3>
+        <p>Lead Wedding Planner — Expert in personalized wedding concepts and flawless execution.</p>
+      </div>
+      <div class="team-member">
+        <img src="c2.jpg" alt="Ravi - Decor Specialist" />
+        <h3>Mythili</h3>
+        <p>Decoration Specialist — Creates breathtaking themes and cultural decor.</p>
+      </div>
+      <div class="team-member">
+        <img src="c1.jpg" alt="Nina - Catering Manager" />
+        <h3>Mathin</h3>
+        <p>Catering Manager — Designs menus that delight every palate, with custom traditional and modern options.</p>
+      </div>
+      <div class="team-member">
+        <img src="c3.jpg" alt="Arjun - Entertainment Coordinator" />
+        <h3>Arjun Das</h3>
+        <p>Entertainment Coordinator — Ensures music, dance, and performances bring your celebration to life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work Section -->
+  <section>
+    <h2>How We Work</h2>
+    <div class="workflow-steps">
+      <div class="step">
+        <strong>Step 1: Consultation & Vision</strong>
+        <p>We start by understanding your story, style, and vision to craft a wedding that feels truly yours.</p>
+      </div>
+      <div class="step">
+        <strong>Step 2: Planning & Customization</strong>
+        <p>Our team creates a detailed plan covering every aspect — from venue and decor to catering and ceremonies.</p>
+      </div>
+      <div class="step">
+        <strong>Step 3: Vendor Coordination & Booking</strong>
+        <p>We select trusted vendors and handle all bookings and logistics to keep everything seamless.</p>
+      </div>
+      <div class="step">
+        <strong>Step 4: Execution & Management</strong>
+        <p>On your big day, our managers oversee every detail, ensuring a smooth, stress-free celebration.</p>
+      </div>
+      <div class="step">
+        <strong>Step 5: Post-Wedding Support</strong>
+        <p>We assist with follow-ups, thank-you notes, and any final touches to close your event perfectly.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  &copy; 2025  Vivaah Vedika| Your Dream, Our Promise
+</footer>
+<script>
+ const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  toggle.innerHTML = navLinks.classList.contains("active")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
+</script>
+</body>
+</html>
