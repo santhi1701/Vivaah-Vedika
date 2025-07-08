@@ -174,14 +174,19 @@ header {
       return;
     }
 
-    // Show success message
-    statusDiv.innerText = "Message sent successfully!";
+   //  Show success message
+    statusDiv.innerText = "Message sent successfully! Redirecting to homepage...";
     statusDiv.style.color = "green";
 
-    // Reset the form
+    // Delay and redirect after 2 seconds
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
+
+    // Optional: Clear the form
     this.reset();
   });
-  
+
    const toggle = document.getElementById("menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
