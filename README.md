@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-👉 [Live Demo Link](https://your-live-link.netlify.app)
+👉 [Live Demo Link]( https://santhi1701.github.io/Vivaah-Vedika/)
 
 
 ---
@@ -15,7 +15,7 @@
 
 | Landing Page | Registration Form |
 |--------------|-------------------|
-| ![Landing](screenshots/home.png) | ![Register](screenshots/register.png) |
+| ![Landing](home.png) | ![Register](register.png) |
 
 ---
 
